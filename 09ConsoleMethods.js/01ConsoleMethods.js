@@ -1,0 +1,1 @@
+console.log(console);       // All method in console is displayed
