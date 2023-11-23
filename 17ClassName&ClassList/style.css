@@ -1,0 +1,25 @@
+body{
+    height:100%;
+    width:100%;
+    background-color: aquamarine;
+}
+
+.div1{
+    border : 2px solid black;
+}
+
+.bred{
+    background-color:red;
+}
+
+.bgreen{
+    background-color:green;
+}
+
+.text-dark{
+    color: aquamarine;
+}
+.border-red{
+    border : 5px solid red;
+}
+
