@@ -1,0 +1,24 @@
+<script>
+    /*************Use Cases**************/
+    //replace apply() or passing an array values to method.
+    // Showing in Besic Code.
+
+    //array Concatination
+    let existingProg  =  ["C","C++"];
+    let newProg       =  ["Java","Python"];
+    existingProg      = [...existingProg,...newProg];       // concatination
+    console.log(existingProg);
+
+
+
+
+    //Shallow Copy of an Array
+    let arr1=[1,2,3,4,5];
+    let arr2=arr1;              //Deep Copy Made
+    let arr3=[...arr1];         //Shallow copy Made
+    arr1[0]=10;
+    console.log(arr1);          // [10, 2, 3, 4, 5]
+    console.log(arr2);          // [10, 2, 3, 4, 5]
+    console.log(arr3);          // [1, 2, 3, 4, 5]      // not Effected
+
+</script>

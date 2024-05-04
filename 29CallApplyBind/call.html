@@ -1,0 +1,31 @@
+<script>
+
+    let obj1 = {
+        name : "Tony",
+        age : 16,
+
+        validCheck : function() {
+            if(this.age >= 18 )
+                console.log(` hey ${this.name} , you are now adult. you are eligeble now.`);
+            else
+                console.log(` Sorry ${this.name} , you are not adult. you are not eligeble now.`);
+        },
+        ageUpdater : function(age){
+            this.age=age;
+        }
+    }
+
+
+
+    obj2 = {
+        name : "John",
+        age : 16
+    }
+
+    obj1.validCheck.call(obj2);         // Here we are using call() of obj1 for obj2 object.
+    obj1.ageUpdater.call(obj2,45);      // here we just update the age of the obj2 from 16 to 45. If there we want to pass more objects that will be after , (obj2,45,"Hari",65) like that
+    obj1.validCheck.call(obj2);         // so that will print eligible.
+
+    // obj1.validCheck();
+
+</script>

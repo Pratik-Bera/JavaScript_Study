@@ -1,0 +1,17 @@
+<script>
+    // Syntax is just as rest parameter but it is used just opposite work purpose
+    // rest parameter is used for parameter but Spread is used for Assign or in Argument
+
+    function method1(a,b,...c){     // ""...c" is rest parameter used for storing extra value in an array.
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
+
+    let arr=[1,2,3,4,8];
+    method1(...arr);                // "...arr" is Spread Operator used to pass raw value not array.  
+    console.log(...arr);            // Print : 1  2  3  4  5
+
+
+
+</script>

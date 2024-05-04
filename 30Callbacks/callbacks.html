@@ -1,0 +1,14 @@
+<script>
+
+    //callbacks is a concept when we passed a function as a parameter.
+    function method1(callFunctionasArg){        // I am special cause i have a extra function access by callbacks.
+        console.log("I am a Function taking a function as argument");
+        callFunctionasArg();
+    }
+
+    function method2(){
+        console.log("I am a Function made for callbacks and also can call directly, Dude I have not any thing special.");
+    }
+
+    method1(method2);
+</script>

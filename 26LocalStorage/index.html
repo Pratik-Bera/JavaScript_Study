@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="space">
+        <!-- <h2>Hello Harry</h2> -->
+    </div>
+    
+
+    <script>
+        let div1=document.getElementById("space");
+        if (localStorage.getItem("name")){          //=> Returns the value of key 
+            div1.innerHTML=`<h2>Hello ${localStorage.getItem("name")}</h2>`;
+            
+        }else{                                      //=>If returns null.
+            console.log(localStorage.getItem("name"))
+            let a=prompt("Enter Your name");
+            localStorage.setItem("name", a);
+            div1.innerHTML=`<h2>Hello ${localStorage.getItem("name")}</h2>`;
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<script>
+    // Apply method is used to pass the arguments as parameters that is the difference with call() method.
+    
+    
+    const obj = {
+        fName : "Tony",
+        lName : "Stark",
+        age : 16,
+        fullName : function() {
+            console.log(this.fName + " " + this.lName);
+        },
+        nameChanger : function(fname,lname) {
+            this.fName = fname;
+            this.lName = lname;
+        }
+        
+    };
+
+    const obj2 = {
+        fName : "Sagar",
+        lName : "Bera",
+        age : 16
+    }
+
+    
+    obj.fullName.apply(obj2);           // Sagar Bera  , uses as call() method
+
+    obj.nameChanger.apply(obj2,["Jhum","Bera"]);    // Passing arguments as array
+    console.log(obj2);
+
+
+    let arr = ["Pratik","Bera"];        // create an array and passing it through apply method.
+    obj.nameChanger.apply(obj2,arr);    
+    obj.fullName.apply(obj2);           // Pratik Bera   
+</script>

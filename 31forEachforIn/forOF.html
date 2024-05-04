@@ -1,0 +1,21 @@
+<script>
+    let students=["Sagar","Pritam","Utsab","Arjun","Subhasis","Manojit"];
+    for(let name of students){      // for of loop is used for iterable functions means array and String.
+        console.log(name);          // that will print values not indexes. means first Sagar then remaining
+    }
+
+    for(let alpha of students[0]){
+        console.log(alpha);         // S   a    g     a    r
+    }
+
+    // let obj={
+    //     name : "Sagar",
+    //     age : 16                 Will not Work. cause object can't be iterable.
+    // }
+
+    // for (let i of obj){
+    //     console.log(i);
+    // }
+
+
+</script>

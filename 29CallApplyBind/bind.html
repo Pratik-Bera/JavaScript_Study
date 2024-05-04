@@ -1,0 +1,18 @@
+<script>
+    /* bind() is used for binding a function with any object */
+
+    function feature(){
+       console.log("Now that feature is added to the binding object.");
+    }
+
+    let obj1 = {
+        fName : "Tony",
+        lName : "Stark"
+    }
+
+    let obj1Feature = feature.bind(obj1);
+    obj1Feature();
+    console.log(obj1);
+
+
+</script>
