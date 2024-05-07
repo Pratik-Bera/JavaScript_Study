@@ -1,0 +1,21 @@
+<script>
+    function getdataCovidWB() {
+        
+        let data = fetch('https://data.covid19india.org/v4/min/data.min.json')
+        .then((responceData)=>{
+             return responceData.json();
+        });
+
+        return data;    // return JSON 
+    }
+
+    async function dataTaker() {
+        let data = await getdataCovidWB();
+        // console.log(data);
+        console.log(`As per date ${data.WB.meta.date} in West Bengal State Total Covid paceients are ${data.WB.total.confirmed}`);
+        
+
+    }
+
+    dataTaker();
+</script>

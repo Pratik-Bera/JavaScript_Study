@@ -1,0 +1,41 @@
+<script>
+    const studentList = new Promise((resolve, reject) => {        // that kind of mechanishm is made when not need of Passing argument in Promise.
+        setTimeout(() => {
+            let ListOfStudent = ["Raj", "Avisek", "Jhon", "Jessica"];
+            resolve(ListOfStudent);
+        }, 2000);
+    });
+
+    const studentGetter = (student) => {           // Here we need to pass an argument in Promise. so make it as Function
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                for(let i in obj){              // obj is object and hoisted so can use here also.
+                    if(i === student){           // i also a String and student also
+                        resolve(`Student Name is "${i}" and age of Student is "${obj[i]}"`);
+                    }
+                }   
+                resolve();
+            }, 2000);
+
+        });
+    }
+
+    let obj = {
+        Raj : 25,
+        Abhisek : 30,
+        Jhon : 35,
+        Jessica : 40
+    }
+
+    async function caller() {
+        let studentRecord = await studentList;
+        console.log(studentRecord);
+        let studentdetail = await studentGetter(studentRecord[0]);
+        console.log(studentdetail);
+
+    }
+
+    caller();
+
+
+</script>
